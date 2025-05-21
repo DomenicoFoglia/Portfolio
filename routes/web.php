@@ -8,4 +8,6 @@ Route::get('/', function () {
 })->name('home');
 
 //Evitiamo di scrivere tutte le rotte CRUD utilizzando la riga sotto
-Route::resource('projects', ProjectController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::resource('projects', ProjectController::class);
+});
