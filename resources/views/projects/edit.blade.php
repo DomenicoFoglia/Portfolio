@@ -35,6 +35,39 @@
             </div>
 
             <div class="mb-3">
+                <label class="form-label">Categoria</label>
+                <select name="category_id" class="form-select">
+                    <option value="">-- Seleziona una categoria --</option>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}"
+                            {{ old('category_id', $project->category_id) == $category->id ? 'selected' : '' }}>
+                            {{ $category->name }}
+                        </option>
+                    @endforeach
+                </select>
+                @error('category_id')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Hashtag</label>
+                <div class="form-check">
+                    @foreach ($hashtags as $hashtag)
+                        <div>
+                            <input type="checkbox" name="hashtags[]" value="{{ $hashtag->id }}"
+                                {{ in_array($hashtag->id, old('hashtags', $project->hashtags->pluck('id')->toArray())) ? 'checked' : '' }}>
+                            <label>#{{ $hashtag->name }}</label>
+                        </div>
+                    @endforeach
+                </div>
+                @error('hashtags')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+
+
+            <div class="mb-3">
                 <label class="form-label">Immagine</label>
                 <input type="file" name="image" class="form-control">
                 @if ($project->image)

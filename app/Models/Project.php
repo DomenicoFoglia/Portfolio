@@ -11,7 +11,8 @@ class Project extends Model
         'title',
         'description',
         'image',
-        'link'
+        'link',
+        'category_id',
     ];
 
     public function category()

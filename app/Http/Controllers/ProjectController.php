@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Hashtag;
 use App\Models\Project;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -48,7 +50,9 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('projects.edit', compact('project'));
+        $categories = Category::all();
+        $hashtags = Hashtag::all();
+        return view('projects.edit', compact('project', 'categories', 'hashtags'));
     }
 
     /**
@@ -61,6 +65,9 @@ class ProjectController extends Controller
             'description' => 'required|string',
             'link' => 'nullable|url',
             'image' => 'nullable|image|max:1024',
+            'category_id' => 'nullable|exists:categories,id',
+            'hashtags' => 'nullable|array',
+            'hashtags.*' => 'exists:hashtags,id',
         ]);
 
         if ($request->hasFile('image')) {
@@ -68,6 +75,8 @@ class ProjectController extends Controller
         }
 
         $project->update($data);
+
+        $project->hashtags()->sync($request->hashtags ?? []);
 
         return redirect()->route('projects.index')->with('success', 'Progetto aggiornato con successo!');
     }
