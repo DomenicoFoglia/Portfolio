@@ -11,3 +11,7 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function () {
     Route::resource('projects', ProjectController::class);
 });
+
+Route::get('/projects/{project}/edit-livewire', function (\App\Models\Project $project) {
+    return view('projects.edit-livewire', ['project' => $project]);
+})->middleware('auth')->name('projects.edit-livewire');

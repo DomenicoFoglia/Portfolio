@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
@@ -12,4 +13,14 @@ class Project extends Model
         'image',
         'link'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function hashtags()
+    {
+        return $this->belongsToMany(Hashtag::class);
+    }
 }
