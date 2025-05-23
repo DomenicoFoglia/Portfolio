@@ -1,10 +1,14 @@
 <?php
 
+use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectController;
 
 Route::get('/', function () {
-    return view('welcome');
+    $featuredProjects = Project::where('is_featured', true)->take(3)->get();
+    return view('welcome', [
+        'featuredProjects' => $featuredProjects
+    ]);
 })->name('home');
 
 //Evitiamo di scrivere tutte le rotte CRUD utilizzando la riga sotto

@@ -62,6 +62,12 @@
             </div>
         </div>
 
+        {{-- Metti in homepage --}}
+        <div class="form-check mb-3">
+            <input type="checkbox" id="is_featured" wire:model="is_featured" class="form-check-input" value="1">
+            <label for="is_featured" class="form-check-label">Mostra in homepage</label>
+        </div>
+
         {{-- Immagine --}}
         <div class="mb-3">
             <label class="form-label">Immagine (opzionale)</label>

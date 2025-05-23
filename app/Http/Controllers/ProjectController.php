@@ -68,7 +68,10 @@ class ProjectController extends Controller
             'category_id' => 'nullable|exists:categories,id',
             'hashtags' => 'nullable|array',
             'hashtags.*' => 'exists:hashtags,id',
+            'is_featured' => 'required|boolean',
         ]);
+
+        $data['is_featured'] = $request->has('is_featured');
 
         if ($request->hasFile('image')) {
             $data['image'] = $request->file('image')->store('projects', 'public');

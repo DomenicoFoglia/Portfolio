@@ -13,6 +13,11 @@ class Project extends Model
         'image',
         'link',
         'category_id',
+        'is_featured',
+    ];
+
+    protected $casts = [
+        'is_featured' => 'boolean',
     ];
 
     public function category()

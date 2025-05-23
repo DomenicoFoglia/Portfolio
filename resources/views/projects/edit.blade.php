@@ -66,6 +66,13 @@
                 @enderror
             </div>
 
+            <div class="mb-3 form-check">
+                <input type="hidden" name="is_featured" value="0">
+                <input type="checkbox" name="is_featured" id="is_featured" class="form-check-input" value="1"
+                    {{ old('is_featured', $project->is_featured) ? 'checked' : '' }}>
+                <label for="is_featured" class="form-check-label">Mostra in homepage</label>
+            </div>
+
 
             <div class="mb-3">
                 <label class="form-label">Immagine</label>

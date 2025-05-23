@@ -15,17 +15,20 @@ class ProjectForm extends Component
     public $categories;
     public $selectedHashtags = [];
     public $hashtags;
+    public $is_featured = false;
 
     protected $rules = [
         'title' => 'required|string|max:255',
         'description' => 'required|string',
         'link' => 'nullable|url',
-        'image' => 'nullable|image|max:1024' // 1MB max
+        'image' => 'nullable|image|max:1024',
+        'is_featured' => 'boolean',
     ];
 
     public function save()
     {
         $this->validate();
+        // dd($this->is_featured);
 
         $imagePath = null;
         if ($this->image) {
@@ -38,13 +41,14 @@ class ProjectForm extends Component
             'link' => $this->link,
             'image' => $imagePath,
             'category_id' => $this->category_id,
+            'is_featured' => $this->is_featured,
         ]);
 
         session()->flash('success', 'Progetto aggiunto con successo!');
 
         $project->hashtags()->sync($this->selectedHashtags);
 
-        $this->reset(['title', 'description', 'link', 'image', 'selectedHashtags']);
+        $this->reset(['title', 'description', 'link', 'image', 'selectedHashtags', 'is_featured']);
     }
 
     public function render()
