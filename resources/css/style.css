@@ -1,0 +1,92 @@
+:root {
+    --color-primary: #1e3c72;   /* blu scuro */
+    --color-secondary: #2a5298; /* blu più chiaro */
+    --color-accent: #e1ad01;    /* giallo senape */
+    --color-white: #ffffff;
+    --color-black: #000000;
+}
+
+
+
+/* Sfondo personalizzato hero con variabili */
+.custom-hero-bg {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+
+/* Testo animato */
+#typed-text {
+    font-size: 2.5rem; /* o usa clamp() per rendere responsive */
+    font-weight: 600;
+    color: var(--color-accent);
+    display: inline;
+}
+
+/* Cursore di digitazione */
+.typed-cursor {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* Titolo "Ciao, sono" */
+.animated-text {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+/* Pulsanti (opzionale se vuoi personalizzarli oltre Bootstrap) */
+.btn-outline-light {
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+.btn-outline-light:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-black);
+}
+.btn-light {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-black);
+}
+.btn-light:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.bolla {
+            width: 100px;
+            height: 100px;
+            background-color: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            transform: translateZ(0);
+            position: relative;
+        }
+
+        .bolla::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            top: -20%;
+            left: -20%;
+            transform: scale(1.5);
+            filter: blur(10px);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
