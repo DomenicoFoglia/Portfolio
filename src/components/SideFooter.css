@@ -1,0 +1,46 @@
+.side-footer {
+    margin-top: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+}
+
+.socials a {
+    color: var(--text-2);
+    transition: color 0.15s ease;
+    display: inline-flex;
+}
+
+.socials a:hover {
+    color: var(--text);
+}
+
+.lang {
+    display: flex;
+    gap: 4px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-3);
+}
+
+.lang button {
+    color: var(--text-3);
+    padding: 4px 6px;
+    transition: color 0.15s ease;
+}
+
+.lang button.active,
+.lang button:hover {
+    color: var(--text);
+}
+
+.lang-sep {
+    color: var(--border-strong);
+    padding-top: 4px;
+}

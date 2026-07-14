@@ -1,8 +1,16 @@
+import Sidebar from './components/Sidebar'
+import './styles/layout.css'
+import About from './components/About'
+import Formazione from './components/Formazione'
+
 function App() {
   return (
-    <div>
-      <h1>Domenico Foglia</h1>
-      <p>Portfolio in costruzione.</p>
+    <div className="layout">
+      <Sidebar />
+      <main className="main">
+        <About />
+        <Formazione />
+      </main>
     </div>
   )
 }

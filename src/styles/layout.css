@@ -1,0 +1,24 @@
+.layout {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 0 var(--padding-mobile);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+}
+
+.main {
+    padding: 96px 0;
+}
+
+@media (min-width: 1024px) {
+    .layout {
+        grid-template-columns: minmax(320px, var(--sidebar-width)) minmax(0, 1fr);
+        gap: var(--gap-desktop);
+        padding: 0 var(--padding-desktop);
+    }
+
+    .main {
+        padding: 96px 0 128px;
+    }
+}

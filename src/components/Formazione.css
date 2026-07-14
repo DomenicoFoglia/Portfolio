@@ -1,0 +1,49 @@
+.edu-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+}
+
+.edu-item:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+.edu-year {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brass);
+}
+
+.edu-item h3 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 400;
+    font-variation-settings: 'SOFT' 40, 'WONK' 0, 'opsz' 72;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.edu-school {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-2);
+    margin-bottom: 4px;
+}
+
+.edu-item p {
+    font-size: 14px;
+    margin: 0;
+    max-width: 560px;
+}
