@@ -1,0 +1,45 @@
+.contact-block {
+    max-width: 560px;
+}
+
+.contact-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    padding: 14px 22px;
+    background: var(--text);
+    color: var(--bg);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+}
+
+.contact-cta:hover {
+    background: var(--brass);
+}
+
+.colophon {
+    margin-top: 96px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-3);
+    letter-spacing: 0.04em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.colophon a {
+    color: inherit;
+}
+
+.colophon a:hover {
+    color: var(--text-2);
+}
