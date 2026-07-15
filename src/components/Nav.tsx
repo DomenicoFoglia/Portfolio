@@ -1,4 +1,5 @@
 import './Nav.css'
+import { useScrollSpy } from '../hooks/useScrollSpy'
 
 type NavItem = {
     id: string
@@ -15,14 +16,16 @@ const items: NavItem[] = [
 ]
 
 function Nav() {
+    const activeId = useScrollSpy(items.map(item => item.id))
+
     return (
         <nav className="nav" aria-label="Sezioni">
             <ul>
-                {items.map((item, i) => (
+                {items.map((item) => (
                     <li key={item.id}>
                         <a
                             href={`#${item.id}`}
-                            className={i === 0 ? 'active' : ''}
+                            className={activeId === item.id ? 'active' : ''}
                         >
                             <span className="nav-num">{item.numeral}</span>
                             <span className="nav-label">{item.label}</span>
