@@ -25,31 +25,11 @@
     line-height: 1.55;
 }
 
-.brand-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 24px;
-    padding: 6px 12px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    color: var(--text-2);
+.brand-highlight {
+    color: var(--brass);
 }
 
-.brand-status-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--live);
-    box-shadow: 0 0 0 3px rgba(127, 176, 105, 0.15);
-    animation: pulse 2.4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
+.brand-tech {
+    color: var(--text);
+    border-bottom: 1px solid var(--border-strong);
 }

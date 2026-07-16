@@ -1,0 +1,81 @@
+{
+    "brand": {
+        "role": "Full Stack Developer",
+        "tagline": "Ciao sono <1>Domenico</1>! Sono uno sviluppatore web, vivo a Catanzaro e costruisco applicazioni con <2>Laravel e React</2>. Scorri la pagina per vedere cosa so fare."
+    },
+
+    "about": {
+        "p1": "Sono un <1>Full Stack Developer</1> con alle spalle studi universitari in informatica e un percorso intensivo con Aulab. Non mi limito a creare semplici pagine web: mi piace costruire applicazioni complete, curate in ogni dettaglio.",
+        "p2": "Lavoro su tutto lo stack: React e TypeScript sul frontend, PHP e Laravel sul backend, e MySQL per i database.",
+        "p3": "Nei miei progetti mi occupo di tutto il ciclo di vita: dalla progettazione dello schema del database al deploy su VPS, con Nginx e HTTPS configurati e dati demo pronti all'uso.",
+        "p4": "Cerco un team esperto con cui confrontarmi, dove poter dare il mio contributo fin dal primo giorno e continuare a costruire cose che funzionano davvero."
+    },
+
+    "formazione": {
+        "title": "Come sono arrivato qui.",
+        "items": {
+            "aulab": {
+                "title": "Corso Full Stack Developer",
+                "school": "Universitas Mercatorum · Aulab Hackademy",
+                "description": "Formazione intensiva su HTML, CSS, JavaScript, PHP, Laravel, SQL e React. Sviluppo di applicazioni complete in ambiente Agile/Scrum."
+            },
+            "unical": {
+                "title": "Corso di Laurea in Informatica",
+                "school": "Università della Calabria · percorso interrotto",
+                "description": "Programmazione ad oggetti, algoritmi, basi di dati, matematica discreta, architettura dei sistemi. Fondamenta solide su cui il resto si è costruito."
+            }
+        }
+    },
+
+    "nav": {
+        "about": "About",
+        "formazione": "Formazione",
+        "progetti": "Progetti",
+        "stack": "Stack",
+        "contatti": "Contatti"
+    },
+
+    "progetti": {
+        "title": "Cose che ho costruito.",
+        "items": {
+            "mirivo": {
+                "kicker": "Personale · Portfolio piece",
+                "description": "Sistema di helpdesk multi-tenant con ticket, escalation, chat interna e generazione FAQ da ticket chiusi via Google Gemini. Card login demo per accesso immediato senza registrazione."
+            },
+            "carrermode": {
+                "kicker": "Personale · Bilingue IT/EN",
+                "description": "Web app per gestire le candidature di lavoro. Analisi AI dell'offerta vs CV, generazione cover letter, 10 temi visivi, bilingue IT/EN."
+            },
+            "sedh": {
+                "kicker": "Cliente · Portfolio artista",
+                "description": "Portfolio vetrina per un artista locale. HTML, CSS e JavaScript vanilla, responsive, attenzione al design e alla user experience."
+            },
+            "ricettai": {
+                "kicker": "Personale · Side project AI",
+                "description": "Web app React che genera ricette con Google Gemini 2.5 Flash Lite."
+            },
+            "giftchaos": {
+                "kicker": "Personale · Repo pubblica",
+                "description": "Applicazione full stack per la gestione di eventi Secret Santa. Algoritmo di sorteggio senza duplicati con gestione dei vincoli tra partecipanti, autenticazione, CRUD completo e notifiche email."
+            }
+        }
+    },
+
+    "stack": {
+        "title": "Strumenti che uso ogni giorno.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "tools": "Tools",
+            "other": "Altro"
+        }
+    },
+
+    "contatti": {
+        "title": "Parliamone.",
+        "p1": "Sto cercando un ruolo da <1>Full Stack Developer</1> o <2>Backend / Frontend Developer</2>. Disponibile in presenza, ibrido o da remoto. Aperto a trasferimenti in tutta Italia.",
+        "p2": "Il modo migliore per raggiungermi è via email o LinkedIn, rispondo entro 24 ore.",
+        "colophonLeft": "Domenico Foglia · Catanzaro, IT · ",
+        "colophonRight": "Built with React & Vite · Hosted on Hetzner"
+    }
+}

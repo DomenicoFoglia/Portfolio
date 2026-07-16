@@ -1,6 +1,13 @@
 import './SideFooter.css'
+import { useTranslation } from 'react-i18next'
 
 function SideFooter() {
+    const { i18n } = useTranslation();
+
+    const changeLang = (lang: 'it' | 'en') => {
+        i18n.changeLanguage(lang)
+    }
+
     return (
         <div className="side-footer">
             <div className="socials">
@@ -32,9 +39,19 @@ function SideFooter() {
                 </a>
             </div>
             <div className="lang">
-                <button className="active" type="button">IT</button>
+                <button 
+                    className={i18n.language.startsWith('it') ? 'active' : ''} 
+                    type="button"
+                    onClick={() => changeLang('it')}>
+                        IT
+                </button>
                 <span className="lang-sep">/</span>
-                <button type="button">EN</button>
+                <button 
+                    className={i18n.language.startsWith('en') ? 'active' : ''}
+                    type="button"
+                    onClick={() => changeLang('en')}>
+                        EN
+                    </button>
             </div>
         </div>
     )

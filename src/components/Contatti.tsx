@@ -1,18 +1,23 @@
 import Section from "./Section";
 import './Contatti.css'
+import { Trans, useTranslation } from 'react-i18next'
 
 function Contatti(){
+    const { t } = useTranslation();
+
     return (
         <Section
             id='contatti'
             numeral='V'
-            label='Contatti'
-            title='Parliamone.'
+            label={t('nav.contatti')}
+            title={t('contatti.title')}
         >
 
             <div className="contact-block">
-                <p>Sto cercando un ruolo da <strong>Full Stack Developer</strong> o <strong>Backend / Frontend Developer</strong>. Disponibile in presenza, ibrido o da remoto. Aperto a trasferimenti in tutta Italia.</p>
-                <p>Il modo migliore per raggiungermi è via email o LinkedIn, rispondo entro 24 ore</p>
+                <p>
+                    <Trans i18nKey="contatti.p1" components={{ 1: <strong />, 2: <strong /> }} />
+                </p>
+                <p>{t('contatti.p2')}</p>
                 <a href="mailto:foglia.dmnc@gmail.com" className="contact-cta">
                     foglia.dmnc@gmail.com 
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -22,13 +27,10 @@ function Contatti(){
             </div>
 
             <div className="colophon">
-                <div>Domenico Foglia · Catanzaro, IT <a href="tel:+393888136696">+39 388 813 66 96 </a></div>
-                <div>Built with React & Vite · Hosted on Hetzner </div>
+                <div>{t('contatti.colophonLeft')}<a href="tel:+393888136696">+39 388 813 66 96 </a></div>
+                <div>{t('contatti.colophonRight')} </div>
             </div>
-
-
         </Section>
-
     )
 }
 

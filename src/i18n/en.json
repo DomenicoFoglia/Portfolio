@@ -1,0 +1,81 @@
+{
+    "brand": {
+        "role": "Full Stack Developer",
+        "tagline": "Hi, I'm <1>Domenico</1>. I'm a web developer based in Catanzaro, Italy, and I build applications with <2>Laravel and React</2>. Scroll down to see what I've made."    
+    },
+
+    "about": {
+        "p1": "I'm a <1>Full Stack Developer</1> with a university background in computer science and an intensive bootcamp with Aulab. I don't just build simple web pages: I like to build complete applications, taking care of every detail.",
+        "p2": "I work across the whole stack: React and TypeScript on the frontend, PHP and Laravel on the backend, and MySQL for the database.",
+        "p3": "In my projects I handle the entire lifecycle: from database schema design to deploying on a VPS, with Nginx and HTTPS configured and demo data ready to use.",
+        "p4": "I'm looking for a team of experienced people to work with, where I can contribute from day one and keep building things that actually work."
+    },
+
+    "formazione": {
+        "title": "How I got here.",
+        "items": {
+            "aulab": {
+                "title": "Full Stack Developer Course",
+                "school": "Universitas Mercatorum · Aulab Hackademy",
+                "description": "Intensive training on HTML, CSS, JavaScript, PHP, Laravel, SQL, and React. Building complete applications in an Agile/Scrum environment."
+            },
+            "unical": {
+                "title": "Bachelor's in Computer Science",
+                "school": "University of Calabria · discontinued",
+                "description": "Object-oriented programming, algorithms, databases, discrete mathematics, systems architecture. Solid foundations everything else was built on."
+            }
+        }
+    },
+
+    "nav": {
+        "about": "About",
+        "formazione": "Education",
+        "progetti": "Projects",
+        "stack": "Stack",
+        "contatti": "Contact"
+    },
+
+    "progetti": {
+        "title": "Things I've built.",
+        "items": {
+            "mirivo": {
+                "kicker": "Personal · Portfolio piece",
+                "description": "Multi-tenant helpdesk system with tickets, escalation, internal chat, and FAQ generation from closed tickets via Google Gemini. Demo login card for immediate access, no registration required."
+            },
+            "carrermode": {
+                "kicker": "Personal · Bilingual IT/EN",
+                "description": "Web app to manage job applications. AI analysis of job offer vs CV, cover letter generation, 10 visual themes, bilingual IT/EN."
+            },
+            "sedh": {
+                "kicker": "Client · Artist portfolio",
+                "description": "Showcase portfolio for a local artist. Vanilla HTML, CSS, and JavaScript, responsive, careful attention to design and user experience."
+            },
+            "ricettai": {
+                "kicker": "Personal · Side project AI",
+                "description": "React web app that generates recipes with Google Gemini 2.5 Flash Lite."
+            },
+            "giftchaos": {
+                "kicker": "Personal · Public repo",
+                "description": "Full stack application to manage Secret Santa events. Draw algorithm with constraint handling between participants, authentication, full CRUD, and email notifications."
+            }
+        }
+    },
+
+    "stack": {
+        "title": "Tools I use every day.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "tools": "Tools",
+            "other": "Other"
+        }
+    },
+
+    "contatti": {
+        "title": "Let's talk.",
+        "p1": "I'm looking for a role as a <1>Full Stack Developer</1> or <2>Backend / Frontend Developer</2>. Available on-site, hybrid, or remote. Open to relocation anywhere in Italy.",
+        "p2": "The best way to reach me is via email or LinkedIn, I respond within 24 hours.",
+        "colophonLeft": "Domenico Foglia · Catanzaro, IT · ",
+        "colophonRight": "Built with React & Vite · Hosted on Hetzner"
+    }
+}
