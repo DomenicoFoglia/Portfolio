@@ -1,32 +1,45 @@
-# React + TypeScript + Vite
+# Portfolio · Domenico Foglia
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfolio personale, bilingue IT/EN, con dark/light mode.
 
-Currently, two official plugins are available:
+**Live** → [domenicofoglia.dev](https://domenicofoglia.dev)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Screenshot del portfolio](public/og-image.png)
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** + **TypeScript** + **Vite** per il frontend
+- **react-i18next** per il bilingue
+- **CSS Custom Properties** per la palette e il theming (dark/light)
+- **Nginx** + **Let's Encrypt** su VPS Hetzner per il deploy
 
-## Expanding the Oxlint configuration
+## Struttura del progetto
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+\`\`\`
+src/
+├── components/     # Sidebar, Nav, sezioni contenuto
+├── content/        # Dati dei progetti
+├── hooks/          # useScrollSpy, useTheme
+├── i18n/           # Config i18next + traduzioni IT/EN
+├── styles/         # CSS globali (layout, reset)
+└── App.tsx
+\`\`\`
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+## Development locale
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Requisiti: Node 20+, npm.
+
+\`\`\`bash
+git clone git@github.com:DomenicoFoglia/portfolio.git
+cd portfolio
+npm install
+npm run dev
+\`\`\`
+
+Il sito è disponibile su `http://localhost:5173`.
+
+## Contatti
+
+- Email: [foglia.dmnc@gmail.com](mailto:foglia.dmnc@gmail.com)
+- LinkedIn: [linkedin.com/in/domenicofoglia](https://linkedin.com/in/domenicofoglia)
+- GitHub: [github.com/DomenicoFoglia](https://github.com/DomenicoFoglia)
