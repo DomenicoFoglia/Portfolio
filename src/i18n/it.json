@@ -1,4 +1,9 @@
 {
+    "meta": {
+        "title": "Domenico Foglia · Full Stack Developer",
+        "description": "Portfolio di Domenico Foglia, Full Stack Developer con Laravel, React e TypeScript."
+    },
+    
     "brand": {
         "role": "Full Stack Developer",
         "tagline": "Ciao sono <1>Domenico</1>! Sono uno sviluppatore web, vivo a Catanzaro e costruisco applicazioni con <2>Laravel e React</2>. Scorri la pagina per vedere cosa so fare."
@@ -39,11 +44,11 @@
         "title": "Cose che ho costruito.",
         "items": {
             "mirivo": {
-                "kicker": "Personale · Portfolio piece",
+                "kicker": "Personale · Portfolio",
                 "description": "Sistema di helpdesk multi-tenant con ticket, escalation, chat interna e generazione FAQ da ticket chiusi via Google Gemini. Card login demo per accesso immediato senza registrazione."
             },
             "carrermode": {
-                "kicker": "Personale · Bilingue IT/EN",
+                "kicker": "Personale · Portfolio",
                 "description": "Web app per gestire le candidature di lavoro. Analisi AI dell'offerta vs CV, generazione cover letter, 10 temi visivi, bilingue IT/EN."
             },
             "sedh": {
@@ -76,6 +81,6 @@
         "p1": "Sto cercando un ruolo da <1>Full Stack Developer</1> o <2>Backend / Frontend Developer</2>. Disponibile in presenza, ibrido o da remoto. Aperto a trasferimenti in tutta Italia.",
         "p2": "Il modo migliore per raggiungermi è via email o LinkedIn, rispondo entro 24 ore.",
         "colophonLeft": "Domenico Foglia · Catanzaro, IT · ",
-        "colophonRight": "Built with React & Vite · Hosted on Hetzner"
+        "colophonRight": "Built with React & Vite"
     }
 }

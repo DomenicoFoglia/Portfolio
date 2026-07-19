@@ -9,12 +9,18 @@ import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
 
 function App() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     document.documentElement.lang = i18n.language.startsWith('en') ? 'en' : 'it'
   }, [i18n.language]);
-  
+
+  useEffect(() => {
+    document.title = t('meta.title')
+    const desc = document.querySelector('meta[name="description"]')
+    if (desc) desc.setAttribute('content', t('meta.description'))
+  }, [t, i18n.language])
+
   return (
     <div className="layout">
       <Sidebar />

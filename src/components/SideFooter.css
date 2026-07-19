@@ -6,6 +6,24 @@
     gap: 16px;
 }
 
+.side-footer-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.theme-toggle {
+    color: var(--text-3);
+    font-size: 16px;
+    padding: 4px 6px;
+    transition: color 0.15s ease;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    color: var(--text);
+}
+
 .socials {
     display: flex;
     gap: 16px;

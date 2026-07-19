@@ -23,6 +23,18 @@
   --padding-mobile: 32px;
 }
 
+:root[data-theme="light"] {
+  --bg: #f2f0eb;
+  --surface: #ebe8e0;
+  --border: #d8d3c8;
+  --border-strong: #c2bcae;
+  --text: #1c1c19;
+  --text-2: #5d5b54;
+  --text-3: #8a877e;
+  --brass: #a68449;
+  --live: #5c8b4d;
+}
+
 /* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -44,6 +56,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'ss01', 'cv11';
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Transizioni tema */
+*, *::before, *::after {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    fill 0.3s ease,
+    stroke 0.3s ease;
 }
 
 ::selection {

@@ -1,8 +1,10 @@
 import './SideFooter.css'
 import { useTranslation } from 'react-i18next'
+import { useTheme } from '../hooks/useTheme';
 
 function SideFooter() {
     const { i18n } = useTranslation();
+    const { theme, toggleTheme } = useTheme();
 
     const changeLang = (lang: 'it' | 'en') => {
         i18n.changeLanguage(lang)
@@ -38,21 +40,35 @@ function SideFooter() {
                     </svg>
                 </a>
             </div>
-            <div className="lang">
-                <button 
-                    className={i18n.language.startsWith('it') ? 'active' : ''} 
-                    type="button"
-                    onClick={() => changeLang('it')}>
-                        IT
+
+            <div className="side-footer-right">
+                <button
+                    className='theme-toggle'
+                    type='button'
+                    onClick={toggleTheme}
+                    aria-label='Toggle theme'    
+                >
+                    {theme === 'dark' ? '☀' : '☾'}
                 </button>
-                <span className="lang-sep">/</span>
-                <button 
-                    className={i18n.language.startsWith('en') ? 'active' : ''}
-                    type="button"
-                    onClick={() => changeLang('en')}>
-                        EN
+
+                <div className="lang">
+                    <button 
+                        className={i18n.language.startsWith('it') ? 'active' : ''} 
+                        type="button"
+                        onClick={() => changeLang('it')}>
+                            IT
                     </button>
+                    <span className="lang-sep">/</span>
+                    <button 
+                        className={i18n.language.startsWith('en') ? 'active' : ''}
+                        type="button"
+                        onClick={() => changeLang('en')}>
+                            EN
+                        </button>
+                </div>
             </div>
+
+            
         </div>
     )
 }

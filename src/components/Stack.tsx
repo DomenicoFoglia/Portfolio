@@ -9,22 +9,22 @@ type CategoriaStack = {
 
 const categories: CategoriaStack[] = [
     {
-        id: 'Frontend',
+        id: 'frontend',
         items: ['React', 'JavaScript', 'TypeScript', 'Vite', 'Zustand', 'Recharts', 'Bootstrap', 'HTML', 'CSS']
     },
 
     {
-        id: 'Backend',
+        id: 'backend',
         items: ['PHP', 'Laravel', 'Sanctum', 'REST API', 'MySQL', 'SQL']
     },
 
     {
-        id: 'Tools',
+        id: 'tools',
         items: ['Git', 'GitHub', 'VS Code']
     },
 
     {
-        id:'Altro',
+        id: 'other',
         items: ['C#', 'C++', 'Dart', 'WordPress', 'Agile/Scrum', 'Gemini AI']
     }
 ]
