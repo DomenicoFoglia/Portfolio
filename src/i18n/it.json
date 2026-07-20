@@ -33,6 +33,7 @@
     },
 
     "nav": {
+        "ariaLabel": "Navigazione",
         "about": "About",
         "formazione": "Formazione",
         "progetti": "Progetti",
@@ -82,5 +83,9 @@
         "p2": "Il modo migliore per raggiungermi è via email o LinkedIn, rispondo entro 24 ore.",
         "colophonLeft": "Domenico Foglia · Catanzaro, IT · ",
         "colophonRight": "Built with React & Vite"
+    },
+
+    "sidebar": {
+        "ariaLabel": "Chi sono e navigazione"
     }
 }

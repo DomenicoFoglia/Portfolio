@@ -20,7 +20,7 @@ function Nav() {
     const { t } = useTranslation();
 
     return (
-        <nav className="nav" aria-label="Sezioni">
+        <nav className="nav" aria-label={t('nav.ariaLabel')}>
             <ul>
                 {items.map((item) => (
                     <li key={item.id}>

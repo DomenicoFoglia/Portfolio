@@ -5,7 +5,7 @@ import './Sidebar.css'
 
 function Sidebar() {
     return (
-        <aside className="sidebar">
+        <aside className="sidebar" aria-label={t('sidebar.ariaLabel')}>
             <div className="sidebar-top">
                 <Brand />
                 <Nav />
