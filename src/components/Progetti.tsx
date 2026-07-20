@@ -17,22 +17,30 @@ function Progetti(){
             <div className="projects">
                 {projects.map(project => (
                     <a key={project.id} href={project.url} className="project" target="_blank" rel="noopener noreferrer">
-                        <div className="project-kicker">{t(`progetti.items.${project.id}.kicker`)}</div>
-                        <div className="project-head">
-                            <h3>{project.name} <span className="arrow">↗</span></h3>
+                        <div className="project-content">
+                            <div className="project-kicker">{t(`progetti.items.${project.id}.kicker`)}</div>
+                            <div className="project-head">
+                                <h3>{project.name} <span className="arrow">↗</span></h3>
+                            </div>
+                            <p>{t(`progetti.items.${project.id}.description`)}</p>
+                            <div className="project-meta">
+                                {project.tags.map(tag => (
+                                    <span key={tag} className="tag">{tag}</span>
+                                ))}
+                            </div>
                         </div>
-                        <p>{t(`progetti.items.${project.id}.description`)}</p>
-                        <div className="project-meta">
-                            {project.tags.map(tag => (
-                                <span key={tag} className="tag">{tag}</span>
-                            ))}
+                        
+                        <div className="project-image">
+                            <img
+                                src={project.image}
+                                alt={`Screenshot di ${project.name}`}
+                                loading="lazy"
+                            />
                         </div>
                     </a>
                 ))}
             </div>
         </Section>
-
-
     )
 }
 
