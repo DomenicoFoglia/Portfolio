@@ -7,6 +7,7 @@ import Stack from './components/Stack'
 import Contatti from './components/Contatti'
 import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
+import ScrollProgress from './components/ScrollProgress'
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -22,6 +23,8 @@ function App() {
   }, [t, i18n.language])
 
   return (
+    <>
+    <ScrollProgress />
     <div className="layout">
       <Sidebar />
       <main className="main">
@@ -33,6 +36,7 @@ function App() {
 
       </main>
     </div>
+  </>
   )
 }
 

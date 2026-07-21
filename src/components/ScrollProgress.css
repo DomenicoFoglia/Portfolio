@@ -1,0 +1,74 @@
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.scroll-progress-bar {
+    height: 2px;
+    background: var(--brass);
+    transition: width 0.05s ease-out;
+}
+
+.scroll-progress-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll-progress-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-progress-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 4px 8px;
+    color: var(--text-3);
+    transition: color 0.2s ease;
+    min-width: 0;
+    flex-shrink: 0;
+}
+
+.scroll-progress-num {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--text-3);
+    transition: color 0.2s ease;
+}
+
+.scroll-progress-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    transition: color 0.2s ease;
+}
+
+.scroll-progress-nav a.active {
+    color: var(--text);
+}
+
+.scroll-progress-nav a.active .scroll-progress-num,
+.scroll-progress-nav a.active .scroll-progress-label {
+    color: var(--brass);
+}
+
+/* Nascondi su desktop */
+@media (min-width: 1024px) {
+    .scroll-progress {
+        display: none;
+    }
+}
