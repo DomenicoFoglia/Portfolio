@@ -2,7 +2,7 @@
     padding: 96px 0 48px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (min-height: 720px) {
     .sidebar {
         position: sticky;
         top: 0;

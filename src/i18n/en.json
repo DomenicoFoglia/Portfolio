@@ -13,7 +13,11 @@
         "p1": "I'm a <1>Full Stack Developer</1> with a university background in computer science and an intensive bootcamp with Aulab. I don't just build simple web pages: I like to build complete applications, taking care of every detail.",
         "p2": "I work across the whole stack: React and TypeScript on the frontend, PHP and Laravel on the backend, and MySQL for the database.",
         "p3": "In my projects I handle the entire lifecycle: from database schema design to deploying on a VPS, with Nginx and HTTPS configured and demo data ready to use.",
-        "p4": "I'm looking for a team of experienced people to work with, where I can contribute from day one and keep building things that actually work."
+        "p4": "I'm looking for a team of experienced people to work with, where I can contribute from day one and keep building things that actually work.",
+        "note1": "// path",
+        "note2": "// stack",
+        "note3": "// lifecycle",
+        "note4": "// goal"
     },
 
     "formazione": {

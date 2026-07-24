@@ -1,0 +1,31 @@
+.signature {
+    width: 48px;
+    height: auto;
+    /* margin-top: 24px; */
+    margin: -10px;
+    color: var(--brass);
+    opacity: 0;
+    transform: translateY(4px);
+    animation: signature-fade-in 1.4s ease-out 0.6s forwards;
+}
+
+.signature svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes signature-fade-in {
+    to {
+        opacity: 0.85;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .signature {
+        animation: none;
+        opacity: 0.85;
+        transform: none;
+    }
+}

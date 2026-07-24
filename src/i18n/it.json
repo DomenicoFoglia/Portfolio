@@ -13,7 +13,11 @@
         "p1": "Sono un <1>Full Stack Developer</1> con alle spalle studi universitari in informatica e un percorso intensivo con Aulab. Non mi limito a creare semplici pagine web: mi piace costruire applicazioni complete, curate in ogni dettaglio.",
         "p2": "Lavoro su tutto lo stack: React e TypeScript sul frontend, PHP e Laravel sul backend, e MySQL per i database.",
         "p3": "Nei miei progetti mi occupo di tutto il ciclo di vita: dalla progettazione dello schema del database al deploy su VPS, con Nginx e HTTPS configurati e dati demo pronti all'uso.",
-        "p4": "Cerco un team esperto con cui confrontarmi, dove poter dare il mio contributo fin dal primo giorno e continuare a costruire cose che funzionano davvero."
+        "p4": "Cerco un team esperto con cui confrontarmi, dove poter dare il mio contributo fin dal primo giorno e continuare a costruire cose che funzionano davvero.",
+        "note1": "// percorso",
+        "note2": "// stack",
+        "note3": "// ciclo",
+        "note4": "// obiettivo"
     },
 
     "formazione": {
