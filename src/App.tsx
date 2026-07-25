@@ -8,6 +8,7 @@ import Contatti from './components/Contatti'
 import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
 import ScrollProgress from './components/ScrollProgress'
+import Guestbook from './components/GuestBook'
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -33,6 +34,7 @@ function App() {
         <Progetti />
         <Stack />
         <Contatti />
+        <Guestbook />
 
       </main>
     </div>

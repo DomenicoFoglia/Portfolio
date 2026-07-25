@@ -42,7 +42,8 @@
         "formazione": "Education",
         "progetti": "Projects",
         "stack": "Stack",
-        "contatti": "Contact"
+        "contatti": "Contact",
+        "guestbook": "Guestbook"
     },
 
     "progetti": {
@@ -91,5 +92,19 @@
 
     "sidebar": {
         "ariaLabel": "About me and navigation"
+    },
+
+    "guestbook": {
+        "title": "Guestbook",
+        "intro": "Leave a greeting, a comment, a constructive critique. Any message is welcome.",
+        "loading": "Loading greetings...",
+        "empty": "No greetings yet. Be the first.",
+        "form": {
+            "name": "Name",
+            "message": "Message",
+            "submit": "Send",
+            "sending": "Sending...",
+            "success": "Thanks for your greeting!"
+        }
     }
 }

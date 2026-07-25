@@ -81,10 +81,19 @@
 
 .project-meta {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
     flex-wrap: wrap;
+}
+
+.project-tags {
+    display: flex;
     gap: 8px;
-    margin-top: auto;
-    padding-top: 16px;
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 0;
 }
 
 .tag {

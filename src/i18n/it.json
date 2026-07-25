@@ -42,7 +42,8 @@
         "formazione": "Formazione",
         "progetti": "Progetti",
         "stack": "Stack",
-        "contatti": "Contatti"
+        "contatti": "Contatti",
+        "guestbook": "Guestbook"
     },
 
     "progetti": {
@@ -91,5 +92,19 @@
 
     "sidebar": {
         "ariaLabel": "Chi sono e navigazione"
+    },
+
+    "guestbook": {
+        "title": "Guestbook",
+        "intro": "Lascia un saluto, un commento, una critica costruttiva. Ogni messaggio è benvenuto.",
+        "loading": "Caricamento saluti...",
+        "empty": "Nessun saluto ancora. Sii il primo.",
+        "form": {
+            "name": "Nome",
+            "message": "Messaggio",
+            "submit": "Invia",
+            "sending": "Invio in corso...",
+            "success": "Grazie per il tuo saluto!"
+        }
     }
 }

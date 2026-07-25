@@ -1,11 +1,14 @@
-import { projects} from "../content/projects";
+import { projects } from "../content/projects";
 import Section from "./Section";
+import LikeButton from "./LikeButton";
+import { useLikes } from "../hooks/useLikes";
 import './Progetti.css'
 import { useTranslation } from 'react-i18next'
 
 
 function Progetti(){
     const { t } = useTranslation();
+    const { counts, likedByMe, toggle } = useLikes();
 
     return (
         <Section
@@ -24,9 +27,16 @@ function Progetti(){
                             </div>
                             <p>{t(`progetti.items.${project.id}.description`)}</p>
                             <div className="project-meta">
-                                {project.tags.map(tag => (
-                                    <span key={tag} className="tag">{tag}</span>
-                                ))}
+                                <div className="project-tags">
+                                    {project.tags.map(tag => (
+                                        <span key={tag} className="tag">{tag}</span>
+                                    ))}
+                                </div>
+                                <LikeButton
+                                    liked={likedByMe.has(project.id)}
+                                    count={counts[project.id] || 0}
+                                    onToggle={() => toggle(project.id)}
+                                />
                             </div>
                         </div>
                         

@@ -1,0 +1,32 @@
+.like-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-3);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    background: transparent;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.like-button:hover {
+    color: var(--text-2);
+    border-color: var(--border-strong);
+}
+
+.like-button.liked {
+    color: var(--brass);
+    border-color: var(--brass);
+}
+
+.like-button:active {
+    transform: scale(0.95);
+}
+
+.like-count {
+    font-variant-numeric: tabular-nums;
+}
