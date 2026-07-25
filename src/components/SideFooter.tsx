@@ -1,6 +1,8 @@
 import './SideFooter.css'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from '../hooks/useTheme';
+import Lamp from './Lamp'
+import './Lamp.css'
 
 function SideFooter() {
     const { i18n } = useTranslation();
@@ -48,7 +50,7 @@ function SideFooter() {
                     onClick={toggleTheme}
                     aria-label='Toggle theme'    
                 >
-                    {theme === 'dark' ? '☀' : '☾'}
+                    <Lamp on={theme === 'light'} />
                 </button>
 
                 <div className="lang">

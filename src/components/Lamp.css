@@ -1,0 +1,61 @@
+.lamp {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    line-height: 0;
+    transition: transform 0.15s ease;
+}
+
+.lamp-img {
+    width: 22px;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.lamp-img-on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.is-on .lamp-img-on {
+    opacity: 1;
+}
+
+.is-on .lamp-img-off {
+    opacity: 0;
+}
+
+.theme-toggle:hover .lamp {
+    transform: translateY(-2px);
+}
+
+.theme-toggle:active .lamp {
+    transform: scale(0.92);
+    transition: transform 0.08s ease;
+}
+
+/* Flicker: sfarfallio della lampadina al hover quando spenta */
+.theme-toggle:hover .lamp.is-off .lamp-img-on {
+    animation: lamp-flicker 2.4s infinite;
+    animation-delay: 0.2s;
+}
+
+@keyframes lamp-flicker {
+    0%, 100% { opacity: 0; }
+    10% { opacity: 0.5; }
+    30% { opacity: 0; }
+    40% { opacity: 0.7; }
+    60% { opacity: 0.1; }
+    80% { opacity: 0.6; }
+    90% { opacity: 0; }
+    /* buio per il resto del ciclo (88%): sensazione di "tentativo" fallito */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .theme-toggle:hover .lamp.is-off .lamp-img-on {
+        animation: none;
+    }
+}
