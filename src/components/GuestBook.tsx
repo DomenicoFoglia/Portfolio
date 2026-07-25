@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Section from './Section'
 import { useGreetings } from '../hooks/useGreetings'
 import { useTranslation } from 'react-i18next'
-import './Guestbook.css'
+import './GuestBook.css'
 
 function Guestbook() {
     const { t, i18n } = useTranslation()
