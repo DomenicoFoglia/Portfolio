@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import './GuestBook.css'
 
 function Guestbook() {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
     const { greetings, loading, submitting, submit } = useGreetings()
     
     const [name, setName] = useState('')
