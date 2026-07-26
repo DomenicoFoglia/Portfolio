@@ -105,6 +105,7 @@
             "submit": "Send",
             "sending": "Sending...",
             "success": "Thanks for your greeting!"
-        }
+        },
+        "more": "Show {{count}} more"
     }
 }

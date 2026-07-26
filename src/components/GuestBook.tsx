@@ -13,6 +13,7 @@ function Guestbook() {
     const [website, setWebsite] = useState('') // honeypot
     const [error, setError] = useState<string | null>(null)
     const [success, setSuccess] = useState(false)
+    const [visibleCount, setVisibleCount] = useState(3)
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -31,14 +32,14 @@ function Guestbook() {
         }
     }
 
-    const formatDate = (isoDate: string) => {
-        const date = new Date(isoDate)
-        return date.toLocaleDateString(i18n.language.startsWith('it') ? 'it-IT' : 'en-US', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric',
-        })
-    }
+    // const formatDate = (isoDate: string) => {
+    //     const date = new Date(isoDate)
+    //     return date.toLocaleDateString(i18n.language.startsWith('it') ? 'it-IT' : 'en-US', {
+    //         year: 'numeric',
+    //         month: 'short',
+    //         day: 'numeric',
+    //     })
+    // }
 
     return (
         <Section
@@ -114,15 +115,27 @@ function Guestbook() {
                 ) : greetings.length === 0 ? (
                     <div className="guestbook-empty">{t('guestbook.empty')}</div>
                 ) : (
-                    greetings.map(g => (
-                        <article key={g.id} className="greeting">
-                            <header className="greeting-head">
-                                <span className="greeting-name">{g.name}</span>
-                                <span className="greeting-date">{formatDate(g.created_at)}</span>
-                            </header>
-                            <p className="greeting-message">{g.message}</p>
-                        </article>
-                    ))
+                    <>
+                        {greetings.slice(0, visibleCount).map(g => (
+                            <article key={g.id} className="greeting">
+                                <header className="greeting-head">
+                                    <span className="greeting-name">{g.name}</span>
+                                    {/* <span className="greeting-date">{formatDate(g.created_at)}</span> */}
+                                </header>
+                                <p className="greeting-message">{g.message}</p>
+                            </article>
+                        ))}
+                        
+                        {visibleCount < greetings.length && (
+                            <button 
+                                type="button"
+                                className="guestbook-more"
+                                onClick={() => setVisibleCount(v => v + 5)}
+                            >
+                                {t('guestbook.more', { count: Math.min(5, greetings.length - visibleCount) })}
+                            </button>
+                        )}
+                    </>
                 )}
             </div>
         </Section>

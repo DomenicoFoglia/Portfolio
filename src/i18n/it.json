@@ -105,6 +105,7 @@
             "submit": "Invia",
             "sending": "Invio in corso...",
             "success": "Grazie per il tuo saluto!"
-        }
+        },
+        "more": "Vedi altri {{count}}"
     }
 }

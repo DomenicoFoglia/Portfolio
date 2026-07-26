@@ -14,6 +14,7 @@ const items: NavItem[] = [
     { id: 'progetti', numeral: 'III' },
     { id: 'stack', numeral: 'IV' },
     { id: 'contatti', numeral: 'V' },
+    { id: 'guestbook', numeral: 'VI' },
 ]
 
 function ScrollProgress() {

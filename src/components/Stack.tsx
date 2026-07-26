@@ -25,7 +25,7 @@ const categories: CategoriaStack[] = [
 
     {
         id: 'other',
-        items: ['C#', 'C++', 'Dart', 'WordPress', 'Agile/Scrum', 'Gemini AI']
+        items: ['C#', 'C++', 'Dart', 'WordPress', 'Agile/Scrum', 'AI']
     }
 ]
 
